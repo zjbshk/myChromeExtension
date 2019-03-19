@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/Bmob-1.6.7.min.js"></script>
+		<script src="js/mdui.min.js"></script>
+		<script src="js/commanUtil.js"></script>
+		<script src="js/add_url.js"></script>
+		<link href="css/mdui.min.css" rel="stylesheet" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<style>
+			.v_flex {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.form_layout {
+				padding-bottom: 40px;
+			}
+		</style>
+	</head>
+	<body class="mdui-theme-primary-blue mdui-theme-accent-red mdui-appbar-with-toolbar" style="width:340px;height: 500px;">
+		<div class="mdui-appbar mdui-appbar-fixed">
+			<div class="mdui-toolbar mdui-color-theme-600">
+				<a href="index.html" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">&#xe5c4;</i></a>
+				<p href="javascript:;" class="mdui-typo-title">酷站添加</p>
+				<div class="mdui-toolbar-spacer"></div>
+			</div>
+		</div>
+
+		<div class="mdui-container">
+			<div class="form_layout">
+				<form id="form_url">
+					<div class="mdui-textfield">
+						<input id="name" name="name" class="mdui-textfield-input" type="text" required="required" placeholder="请输入网站标题" />
+					</div>
+
+					<div class="mdui-textfield">
+						<input id="link" name="link" class="mdui-textfield-input" type="text" required="required" placeholder="请输入网站链接" />
+					</div>
+
+					<div class="mdui-textfield">
+						<input id="ico_link" name="ico_link" class="mdui-textfield-input" type="text" placeholder="请输入网站图标链接" />
+					</div>
+
+					<div class="mdui-textfield ">
+						<input id="decription" name="decription" class="mdui-textfield-input" type="text" placeholder="请输入网站描述" />
+					</div>
+
+					<div class="mdui-textfield ">
+						<input id="keywords" name="keywords" class="mdui-textfield-input" type="text" placeholder="请输入网站关键字" />
+					</div>
+
+					<div class="mdui-textfield ">
+						<input id="remark" name="remark" class="mdui-textfield-input" type="text" placeholder="请输入网站备注" />
+					</div>
+
+
+					<div class="mdui-textfield ">
+						<input id="tags" name="tags" class="mdui-textfield-input" type="text" placeholder="请输入标签" />
+					</div>
+
+
+					<select id="tag" name="tag" class="custom-select" style="margin-bottom: 10px;" required="required">
+
+					</select>
+
+					<select id="class_" name="class_" class="custom-select" style="margin-bottom: 10px;" required="required">
+
+					</select>
+
+					<input id="not_change" name="not_change" class="mdui-textfield-input" value="no" type="text" hidden="hidden" />
+
+					<input id="report_count" name="report_count" value="0" class="mdui-textfield-input" type="text" hidden="hidden" />
+
+					<input id="collect_count" name="collect_count" value="0" class="mdui-textfield-input" type="text" hidden="hidden" />
+
+					<input id="from_email" name="from_email" class="mdui-textfield-input" type="email" value="admin@user.com"
+					 placeholder="请输入网站推荐人邮箱" hidden="hidden" />
+
+					<input id="state" name="state" class="mdui-textfield-input" type="text" value="0" placeholder="请输入网站状态" hidden="hidden" />
+				</form>
+				<button id="submitBtn" class="mdui-btn mdui-btn-block  mdui-btn-raised  mdui-color-theme-600">上传</button>
+			</div>
+		</div>
+	</body>
+</html>

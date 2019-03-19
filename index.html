@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width">
+		<title>酷站集首页</title>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/handlebars.min.js"></script>
+		<script src="js/Bmob-1.6.7.min.js"></script>
+		<script src="js/mdui.min.js"></script>
+		<script src="js/index.js"></script>
+		<link href="css/mdui.min.css" rel="stylesheet" />
+	</head>
+	<body class="mdui-theme-primary-blue mdui-theme-accent-red mdui-appbar-with-toolbar" style="width:340px;height: 500px;">
+		<div class="mdui-appbar mdui-appbar-fixed">
+			<div class="mdui-toolbar mdui-color-theme-600">
+				<a href="#" id="createBookMark" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+				<a href="#" class="mdui-typo-title">酷站集</a>
+				<div class="mdui-toolbar-spacer"></div>
+				<a href="#" id="refresh" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
+				<a href="#" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>
+			</div>
+		</div>
+
+		<ul class="mdui-list mdui-list-dense" mdui-collapse="{accordion: true}" id="show_list_tags">
+
+		</ul>
+		<a id="fab_action" href="add_url.html" class="mdui-fab mdui-fab-fixed mdui-ripple mdui-color-theme-accent">
+			<i class="mdui-icon material-icons">add</i></a>
+
+		<script id="tag_list_item" type="text/x-handlebars-template">
+			{{#each this}}
+			<li class="mdui-collapse-item mdui-collapse-item-close">
+				<div class="mdui-collapse-item-header mdui-list-item">
+					<div class="mdui-list-item-avatar"><img src="{{cover_image}}"/></div>
+					<div class="mdui-list-item-content">{{name}}</div>
+					<i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+				</div>
+				<ul class="mdui-collapse-item-body mdui-list mdui-list-dense">
+					{{#each class_}}
+					<li class="mdui-list-item mdui-ripple class_item" data-id="{{objectId}}" value="{{objectId}}">{{name}}</li>
+					{{/each}}
+				</ul>
+			</li>
+			{{/each}}
+		</script>
+	</body>
+</html>

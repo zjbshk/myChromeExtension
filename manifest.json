@@ -1,0 +1,36 @@
+{
+	"manifest_version": 2,
+	"name": "BookMark",
+	"description": "书签云，为您整理分类优秀的酷站",
+	"version": "1.0",
+	"browser_action": {
+		"default_icon": "img/icon.png",
+		"default_popup": "index.html",
+		"default_title": "书签云"
+	},
+	"permissions": [
+		"contextMenus",
+		"activeTab",
+		"tabs",
+		"bookmarks",
+		"http://*.itreatment.top/",
+		"http://127.0.0.1:8080/"
+	],
+	"background": {
+		"scripts": [
+			"js/jquery-3.3.1.min.js", 
+			"js/background.js"
+		]
+	},
+	"content_scripts": [{
+		"matches": [
+			"<all_urls>"
+		],
+		"js": [
+			"js/jquery-3.3.1.min.js",
+			"js/handlebars.min.js",
+			"js/content_script.js"
+		],
+		"run_at": "document_start"
+	}]
+}
